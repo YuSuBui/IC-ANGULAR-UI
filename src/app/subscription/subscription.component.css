@@ -57,6 +57,7 @@
     position: absolute;
     border-radius: 4px;
     width: 229px;
+    font-size: 16px;
 }
 
 ::ng-deep .modal-content .modal-body .choosen-body .btn-delete-anyway {
@@ -79,4 +80,20 @@
 ::ng-deep .modal-content .modal-body .choosen-body .btn-cancel:active {
     outline: none !important;
     box-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        left: 10%;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        left: 5%;
+    }
+     ::ng-deep .modal-content .modal-body .choosen-body .btn {
+        width: 145px;
+        font-size: 14px;
+    }
 }
