@@ -1,0 +1,19 @@
+<button type="button" class="btn btn-lg btn-danger" (click)="openModal(content)">Delete Cloud Instance</button>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Delete Cloud Instance</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="content-body">
+            <p class="notifications">Are you sure you want to delete Cloud Instance Halliburton 01?</p>
+            <p class="message">Deleting Cloud instance will remove the Cloud instance and all resources. This cannot be undone.</p>
+        </div>
+        <div class="choosen-body">
+            <button type="button" class="btn btn-lg btn-delete-anyway" (click)="modal.close('Delete anyway click')">Delete  anyway</button>
+            <button type="button" class="btn btn-lg btn-cancel" (click)="modal.dismiss('Cancel click')">Cancel</button>
+        </div>
+    </div>
+</ng-template>

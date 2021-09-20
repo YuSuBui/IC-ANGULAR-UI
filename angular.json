@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "ic-angular-ui"
+  "defaultProject": "ic-angular-ui",
+  "cli": {
+    "analytics": "24468a34-2cd0-4001-a3d8-2de91774925f"
+  }
 }
