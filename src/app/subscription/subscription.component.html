@@ -11,9 +11,9 @@
             <p class="notifications">Are you sure you want to delete Cloud Instance Halliburton 01?</p>
             <p class="message">Deleting Cloud instance will remove the Cloud instance and all resources. This cannot be undone.</p>
         </div>
-        <div class="choosen-body">
-            <button type="button" class="btn btn-lg btn-delete-anyway" (click)="modal.close('Delete anyway click')">Delete  anyway</button>
-            <button type="button" class="btn btn-lg btn-cancel" (click)="modal.dismiss('Cancel click')">Cancel</button>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-delete-anyway" (click)="modal.close('Delete anyway click')">Delete  anyway</button>
+            <button type="button" class="btn btn-cancel" (click)="modal.dismiss('Cancel click')">Cancel</button>
         </div>
     </div>
 </ng-template>

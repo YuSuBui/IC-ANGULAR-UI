@@ -2,7 +2,6 @@
     position: absolute;
     width: 544px;
     height: 303px;
-    top: 311px;
     background: #3B4055;
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
@@ -13,9 +12,8 @@
 }
 
 ::ng-deep .modal-content .modal-header h4 {
-    margin-left: 8px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     color: #FFFFFF;
 }
 
@@ -24,25 +22,19 @@
 }
 
 ::ng-deep .modal-content .modal-body .content-body {
-    position: relative;
-    min-height: 138px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 130px;
 }
 
 ::ng-deep .modal-content .modal-body .content-body p.notifications {
-    position: absolute;
-    width: 280px;
-    top: 10px;
-    left: 25%;
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
     color: #FFFFFF;
 }
 
 ::ng-deep .modal-content .modal-body .content-body p.message {
-    position: absolute;
-    width: 310px;
-    top: 73px;
-    left: 21%;
     font-size: 14px;
     color: #A9ADBF;
     text-align: center;
@@ -53,47 +45,150 @@
     min-height: 50px;
 }
 
-::ng-deep .modal-content .modal-body .choosen-body .btn {
-    position: absolute;
-    border-radius: 4px;
+::ng-deep .modal-content .modal-body .d-flex .btn {
+    margin: 0px 10px 0px 10px;
     width: 229px;
+    border-radius: 4px;
     font-size: 16px;
 }
 
-::ng-deep .modal-content .modal-body .choosen-body .btn-delete-anyway {
+::ng-deep .modal-content .modal-body .d-flex .btn-delete-anyway {
     background-color: #252836;
-    left: 5%;
     font-weight: bold;
     color: #FFFFFF
 }
 
-::ng-deep .modal-content .modal-body .choosen-body .btn-cancel {
+::ng-deep .modal-content .modal-body .d-flex .btn-cancel {
     background-color: #737998;
-    left: 52%;
     font-weight: bold;
     color: #252836;
 }
 
-::ng-deep .modal-content .modal-body .choosen-body .btn-delete-anyway:focus,
-::ng-deep .modal-content .modal-body .choosen-body .btn-delete-anyway:active,
-::ng-deep .modal-content .modal-body .choosen-body .btn-cancel:focus,
-::ng-deep .modal-content .modal-body .choosen-body .btn-cancel:active {
+::ng-deep .modal-content .modal-body .d-flex .btn-delete-anyway:focus,
+::ng-deep .modal-content .modal-body .d-flex .btn-delete-anyway:active,
+::ng-deep .modal-content .modal-body .d-flex .btn-cancel:focus,
+::ng-deep .modal-content .modal-body .d-flex .btn-cancel:active {
     outline: none !important;
     box-shadow: none;
 }
 
-@media only screen and (max-width: 600px) {
+
+/* Extra small devices (phones, 320px and down) */
+
+@media only screen and (max-width: 320px) {
      ::ng-deep .modal-content {
         width: 100%;
+        top: 50px;
     }
      ::ng-deep .modal-content .modal-body .content-body p.notifications {
-        left: 10%;
+        margin: 0rem 0rem 0rem 0rem;
+        font-size: 16px;
     }
      ::ng-deep .modal-content .modal-body .content-body p.message {
-        left: 5%;
+        margin: 0.5rem 0rem 0rem 0rem;
+        font-size: 12px;
     }
-     ::ng-deep .modal-content .modal-body .choosen-body .btn {
-        width: 145px;
-        font-size: 14px;
+     ::ng-deep .modal-content .modal-body .d-flex {
+        margin-top: -1rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 2px 0px 2px;
+        font-size: 15px;
+    }
+}
+
+
+/* Extra small devices (phones, 321px and up) */
+
+@media only screen and (min-width: 321px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+        top: 50px;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        font-size: 17px;
+        margin: 0rem 2rem 0rem 2rem;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        margin: 0.5rem 1.2rem 0rem 1.2rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 5px 0px 5px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+        top: 30px;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        margin: 0rem 3rem 0rem 3rem;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        margin: 0.5rem 4.5rem 0rem 4.5rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 5px 0px 5px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+        top: 30px;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        margin: 0rem 6rem 0rem 6rem;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        margin: 0.5rem 4.5rem 0rem 4.5rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+        top: 311px;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        margin: 0rem 6rem 0rem 6rem;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        margin: 1rem 4.5rem 0rem 4.5rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+     ::ng-deep .modal-content {
+        width: 100%;
+        top: 311px;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.notifications {
+        margin: 0rem 6rem 0rem 6rem;
+    }
+     ::ng-deep .modal-content .modal-body .content-body p.message {
+        margin: 1rem 4.5rem 0rem 4.5rem;
+    }
+     ::ng-deep .modal-content .modal-body .d-flex .btn {
+        margin: 0px 10px 0px 10px;
     }
 }
