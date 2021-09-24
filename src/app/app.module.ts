@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    MyCartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-12 d-lg-flex my-cart" *ngFor="let item of items">
+        <div class="info-item d-md-flex">
+            <div class="item-icon">
+                <img src="../../assets/images/{{item.imageUrl}}" alt="{{item.title}}">
+            </div>
+            <div class="item-content ">
+                <label for="geo-science-title">{{item.title}}</label>
+                <p>{{item.content}}</p>
+                <div class="form-group row">
+                    <label for="number-of-user" class="col-md-3 col-sm-3 number-of-user">Number of user</label>
+                    <div class="col-md-9 col-sm-9">
+                        <input type="text" class="col-sm-5 form-control number-of-user" placeholder="Enter">
+                        <small class="form-text text-muted">Number of users allow to access the application</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-price">
+            <div class="d-md-flex">
+                <div class="d-sm-flex flex-lg-column radio-toolbar">
+                    <div class="form-check" [ngClass]="{'checked-contact' : !item.isAnnualContact}" (click)="uncheckAnualContact(item)">
+                        <input class="form-check-input" type="radio" name="{{item.id}}-{{item.title}}" id="{{item.id}}-{{item.title}}-{{item.isAnnualContact}}-ID" [checked]="!item.isAnnualContact" (click)="uncheckAnualContact(item)">
+                        <label class="form-check-label" for="checkInputRadioNameID1">
+                            2999.00 Monthly per user
+                            <p>Price without annual contract</p>
+                        </label>
+                    </div>
+                    <div class="form-check" [ngClass]="{'checked-contact' : item.isAnnualContact}" (click)="checkAnualContact(item)">
+                        <input class="form-check-input" type="radio" name="{{item.id}}-{{item.title}}" id="{{item.id}}-{{item.title}}-{{item.isAnnualContact}}-ID" [checked]="item.isAnnualContact" (click)="checkAnualContact(item)">
+                        <label class="form-check-label" for="checkInputRadioNameID2">
+                            1999.00 Monthly per user 
+                            <p>Price with annual contract</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="trash-icon">
+                    <img src="../../assets/images/trash-1.svg" alt="trash-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
